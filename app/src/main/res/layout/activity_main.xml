@@ -17,11 +17,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="4dp"
         android:ems="10"
-        android:hint="Masukan Nama Kayu"
+        android:hint="Masukan Nama"
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/editTextUkuran"
+        android:id="@+id/editTextUmur"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -29,11 +29,11 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="4dp"
         android:ems="10"
-        android:hint="Masukan Ukuran Kayuu"
+        android:hint="Masukkan Umur"
         android:inputType="text" />
 
     <EditText
-        android:id="@+id/editTextHarga"
+        android:id="@+id/editTextPenyakit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
@@ -41,7 +41,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="4dp"
         android:ems="10"
-        android:hint="Masukan Harga Kayu"
+        android:hint="Masukan Nama Penyakit"
         android:inputType="text" />
 
     <Button

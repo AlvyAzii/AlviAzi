@@ -4,7 +4,7 @@ import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import org.jetbrains.anko.db.*
 
-class DBHelper(ctx: Context): ManagedSQLiteOpenHelper(ctx, "Kayu.db", null, 1) {
+class DBHelper(ctx: Context): ManagedSQLiteOpenHelper(ctx, "Balita.db", null, 1) {
     companion object{
         private var instance: DBHelper? = null
         @Synchronized
@@ -18,16 +18,16 @@ class DBHelper(ctx: Context): ManagedSQLiteOpenHelper(ctx, "Kayu.db", null, 1) {
     }
 
     override fun onCreate(db: SQLiteDatabase?) {
-        db?.createTable(Kayu.TABLE_KAYU, true,
-        Kayu.ID to INTEGER + PRIMARY_KEY + AUTOINCREMENT,
-        Kayu.NAMA to TEXT,
-        Kayu.UKURAN to TEXT,
-        Kayu.HARGA to TEXT
+        db?.createTable(Balita.TABLE_BALITA, true,
+        Balita.ID to INTEGER + PRIMARY_KEY + AUTOINCREMENT,
+        Balita.NAMA to TEXT,
+        Balita.UMUR to TEXT,
+        Balita.PENYAKIT to TEXT
         )
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
-        db?.dropTable(Kayu.TABLE_KAYU, true)
+        db?.dropTable(Balita.TABLE_BALITA, true)
     }
 }
 

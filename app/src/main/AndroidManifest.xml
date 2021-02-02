@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ListKayuActivity"></activity>
+        <activity android:name=".ListBalitaActivity"></activity>
         <activity android:name=".ListPonpesActivity" />
         <activity android:name=".ListSantriActivity" />
         <activity android:name=".MainActivity">

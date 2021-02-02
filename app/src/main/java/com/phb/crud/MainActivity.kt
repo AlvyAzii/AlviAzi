@@ -1,6 +1,5 @@
 package com.phb.crud
 
-import android.app.DownloadManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,37 +14,37 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         var oldNama = intent.getStringExtra("oldNama")
-        var oldUkuran = intent.getStringExtra("oldUkuran")
-        var oldHarga = intent.getStringExtra("oldHarga")
+        var oldUmur = intent.getStringExtra("oldUmur")
+        var oldPenyakit = intent.getStringExtra("oldPenyakit")
 
 
-        if (oldUkuran.isNullOrBlank()){
+        if (oldUmur.isNullOrBlank()){
             buttonUpdate.isEnabled = false
         }else{
             buttonSimpan.isEnabled = false
             editTextNama.setText(oldNama)
-            editTextUkuran.setText(oldUkuran)
-            editTextHarga.setText(oldHarga)
+            editTextUmur.setText(oldUmur)
+            editTextPenyakit.setText(oldPenyakit)
         }
 
         buttonSimpan.setOnClickListener {
-            addDataKayu()
+            addDataBalita()
 
             // clear data
             clearData()
         }
 
         buttonLihatData.setOnClickListener {
-            startActivity<ListKayuActivity>()
+            startActivity<ListBalitaActivity>()
         }
 
         buttonUpdate.setOnClickListener {
             database.use {
-                update(Kayu.TABLE_KAYU,
-                    Kayu.NAMA to editTextNama.text.toString(),
-                    Kayu.UKURAN to editTextUkuran.text.toString(),
-                    Kayu.HARGA to editTextHarga.text.toString())
-                    .whereArgs("${Kayu.NAMA} = {nama}",
+                update(Balita.TABLE_BALITA,
+                    Balita.NAMA to editTextNama.text.toString(),
+                    Balita.UMUR to editTextUmur.text.toString(),
+                    Balita.PENYAKIT to editTextPenyakit.text.toString())
+                    .whereArgs("${Balita.NAMA} = {nama}",
                     "nama" to oldNama
                     ).exec()
             }
@@ -56,12 +55,12 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun addDataKayu() {
+    private fun addDataBalita() {
         database.use {
-            insert(Kayu.TABLE_KAYU,
-                Kayu.NAMA to editTextNama.text.toString(),
-                Kayu.UKURAN to editTextUkuran.text.toString(),
-                Kayu.HARGA to editTextHarga.text.toString()
+            insert(Balita.TABLE_BALITA,
+                Balita.NAMA to editTextNama.text.toString(),
+                Balita.UMUR to editTextUmur.text.toString(),
+                Balita.PENYAKIT to editTextPenyakit.text.toString()
             )
             toast("Data berhasil disimpan!")
         }
@@ -69,7 +68,7 @@ class MainActivity : AppCompatActivity() {
 
     fun clearData(){
         editTextNama.text.clear()
-        editTextUkuran.text.clear()
-        editTextHarga.text.clear()
+        editTextUmur.text.clear()
+        editTextPenyakit.text.clear()
     }
 }
