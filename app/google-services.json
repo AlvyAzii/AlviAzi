@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "718599386326",
+    "project_id": "crud-kayu",
+    "storage_bucket": "crud-kayu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718599386326:android:b6d633b6eef978e7834577",
+        "android_client_info": {
+          "package_name": "com.phb.crud"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "718599386326-5bvhfn8jbitpn0g6jao4rnifkbpukr9u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBSENBRY1zfj72s8YYxKKTAq3UW9poALA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "718599386326-5bvhfn8jbitpn0g6jao4rnifkbpukr9u.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
