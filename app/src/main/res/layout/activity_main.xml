@@ -29,7 +29,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="4dp"
         android:ems="10"
-        android:hint="Masukan Ukuran Kayu"
+        android:hint="Masukan Ukuran Kayuu"
         android:inputType="text" />
 
     <EditText
